@@ -6,7 +6,7 @@ function fetchData(url) {
       if (response.status === 200) {
         return response.json();
       }
-      return Promise.reject();
+      return Promise.reject('error');
     })
     .then(data => console.log(data))
     .catch(err => console.log(err));
